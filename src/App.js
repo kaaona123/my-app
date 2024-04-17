@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Profile from './components/Profile';
+import SocialLink from './components/SocialLink';
+import './App.css'; // Your main styling
 
 function App() {
+  const profileInfo = {
+    name: "Robby Langley",
+    location: "Mesa, Arizona",
+    bio: "Front-end developer and avid reader."
+  };
+
+  const socialLinks = [
+    { name: "GitHub", url: "https://github.com" },
+    { name: "Frontend Mentor", url: "https://www.frontendmentor.io" },
+    { name: "LinkedIn", url: "https://linkedin.com" },
+    // Add more social links here...
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="card"> {/* Card container */}
+        <Profile {...profileInfo} />
+        <div className="social-links">
+          {socialLinks.map((link, index) => (
+            <SocialLink key={index} {...link} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
 
+
 export default App;
+

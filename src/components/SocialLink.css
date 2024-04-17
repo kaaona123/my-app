@@ -1,0 +1,18 @@
+/* SocialLink.css */
+.social-link {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #554c4c; 
+    border: 2px snow #000000; 
+    border-radius: 4px;
+    text-decoration: none;
+    color: #ffffff; 
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .social-link:hover {
+    background-color: #fcffd0;
+    color: rgb(0, 0, 0); 
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0); 
+  } 
